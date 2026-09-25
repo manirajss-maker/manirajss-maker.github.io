@@ -1,0 +1,16 @@
+# dependencies & build output
+node_modules/
+.next/
+out/
+
+# editor / AI-tool settings
+.agents/
+.claude/
+
+# personal files
+Linkedin Profile.PDF.pdf
+
+# misc
+.DS_Store
+*.log
+.env*

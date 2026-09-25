@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #060913;
+  --foreground: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: #94a3b8;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #0284c7;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+/* Custom subtle ambient glow */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+/* Glass card styling */
+.glass-card {
+  background: rgba(16, 26, 47, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}

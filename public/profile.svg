@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070b16" />
+    </linearGradient>
+
+    <!-- Gold Border Ring Gradient -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Suit Gradient -->
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Skin / Silhouette Gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#9a7b20" />
+    </linearGradient>
+
+    <!-- Tie Gradient -->
+    <linearGradient id="tieGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Glow Circle -->
+  <circle cx="150" cy="150" r="142" fill="none" stroke="#eab308" stroke-width="3" opacity="0.3" filter="url(#glow)" />
+
+  <!-- Main Background Circle -->
+  <circle cx="150" cy="150" r="138" fill="url(#bgGrad)" stroke="url(#goldRing)" stroke-width="4" />
+
+  <!-- Inner Soft Pattern Ring -->
+  <circle cx="150" cy="150" r="130" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 6" opacity="0.4" />
+
+  <!-- Clip Path to keep avatar inside circle -->
+  <clipPath id="avatarClip">
+    <circle cx="150" cy="150" r="136" />
+  </clipPath>
+
+  <g clip-path="url(#avatarClip)">
+    <!-- Shoulders & Suit Coat -->
+    <path d="M 60 280 C 70 210, 110 190, 150 190 C 190 190, 230 210, 240 280 Z" fill="url(#suitGrad)" stroke="#475569" stroke-width="2" />
+    
+    <!-- White Collared Shirt -->
+    <polygon points="150,195 125,235 175,235" fill="#f8fafc" />
+    <polygon points="125,200 150,225 130,228" fill="#e2e8f0" />
+    <polygon points="175,200 150,225 170,228" fill="#cbd5e1" />
+
+    <!-- Executive Cyan Tie -->
+    <polygon points="146,218 154,218 158,265 150,278 142,265" fill="url(#tieGrad)" />
+    <!-- Tie Knot -->
+    <polygon points="145,212 155,212 153,222 147,222" fill="#0284c7" />
+
+    <!-- Suit Lapels -->
+    <polygon points="95,280 128,210 144,250 120,280" fill="#1e293b" />
+    <polygon points="205,280 172,210 156,250 180,280" fill="#0f172a" />
+
+    <!-- Neck -->
+    <path d="M 135 155 L 135 195 Q 150 205 165 195 L 165 155 Z" fill="#bfa054" />
+
+    <!-- Head / Face Silhouette -->
+    <ellipse cx="150" cy="135" rx="38" ry="46" fill="url(#skinGrad)" />
+
+    <!-- Hair / Styling Silhouette -->
+    <path d="M 112 135 C 110 95, 135 80, 150 80 C 168 80, 190 95, 188 135 C 182 120, 172 105, 150 105 C 128 105, 118 120, 112 135 Z" fill="#0f172a" />
+
+    <!-- Monogram Overlay Tag at Bottom -->
+    <rect x="110" y="258" width="80" height="24" rx="12" fill="#070b16" stroke="url(#goldRing)" stroke-width="1.5" />
+    <text x="150" y="274" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" fill="#fef08a" text-anchor="middle" letter-spacing="1">MANIRAJ S.</text>
+  </g>
+</svg>
