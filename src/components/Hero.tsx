@@ -69,7 +69,7 @@ export default function Hero() {
             {/* Profile Photo */}
             <div className="relative w-32 h-32 mx-auto mb-5">
               <Image
-                src="/profile.svg"
+                src="/profile.png"
                 alt="Maniraj Sidanathan"
                 width={128}
                 height={128}
